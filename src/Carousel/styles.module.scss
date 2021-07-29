@@ -1,0 +1,56 @@
+.Carousel {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+}
+
+.Slides {
+  display: flex;
+  width: 100vw;
+  height: calc(100vh - 91px);
+
+  overflow-x: scroll;
+  overflow-y: hidden;
+
+  button {
+    width: 100vw;
+    height: 100%;
+    padding: 0;
+    border: none;
+    display: flex;
+    background-color: transparent;
+    justify-content: center;
+    align-items: stretch;
+  }
+}
+
+.Thumbnails {
+  padding: 3px;
+  display: flex;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  width: 100vw;
+  height: 91px;
+
+  button {
+    opacity: .7;
+    padding: 0;
+    margin: 3px;
+    border: none;
+    display: flex;
+    background-color: transparent;
+    transition: opacity .1s ease-in;
+
+    img {
+      width: 85px;
+      height: 85px;
+      object-fit: cover;
+    }
+  }
+}
+
+.active {
+  opacity: 1 !important;
+}
